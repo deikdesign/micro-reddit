@@ -10,30 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_13_195621) do
+ActiveRecord::Schema.define(version: 2021_01_13_220024) do
 
   create_table "authors", force: :cascade do |t|
     t.string "username"
     t.string "email"
     t.string "password"
-    t.integer "author_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "comments", force: :cascade do |t|
     t.text "body"
-    t.integer "author_id"
     t.integer "post_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "author_id"
   end
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "body"
     t.integer "author_id"
-    t.integer "post_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
