@@ -4,7 +4,7 @@ class CreateAuthors < ActiveRecord::Migration[6.1]
       t.string :username
       t.string :email
       t.string :password
-      t.integer :user_id
+      t.integer :author_id
 
       t.timestamps
     end
